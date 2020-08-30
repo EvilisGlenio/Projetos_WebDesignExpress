@@ -110,6 +110,15 @@ section.ux .center > h1{
     margin-bottom: 15px;
 }
 .ux-single p{color: black;}
+
+                                /*  Section - Portifólio */
+
+.port-wrapper{
+    display: flex;
+}
+.img img{
+    max-width: 320px;
+}
                                     /*   Responsivo   */
 @media screen and (max-width:768px){
     /* Header */
