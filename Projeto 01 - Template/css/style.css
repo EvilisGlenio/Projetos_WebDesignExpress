@@ -32,6 +32,8 @@ header{
     font-weight: normal;
 }
 .menu-desktop{
+    position: relative;
+    top: 6px;
     float: right;
 }
 .menu-desktop ul{list-style: none;}
@@ -48,17 +50,21 @@ header{
 }
 .menu-mobile{display: none;}
 
-                                        /*  Banner  */
- section.banner{
+                                        /*  Section - Banner  */
+ main.banner{
     position: relative;
+    width: 100%;
     padding: 140px 0 200px;
     background-image: url(../images/bg1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    z-index: 1;
 }
-section.banner .overlay{
+main.banner > .center{
+    position: relative;
+    z-index: 2;
+}
+main.banner .overlay{
     position: absolute;
     top: 0;
     left: 0;
@@ -66,21 +72,44 @@ section.banner .overlay{
     height: 100%;
     background: black;
     opacity: 0.4;
-    z-index: 2;
+    z-index: 1;
 }
-section.banner h2{
+main.banner h2{
     text-align: center;
     color: #52aaa7;
     font-size: 35px;
     font-weight: normal;
 }
-section.banner p:not(:last-child){margin-bottom: 15px;}
-section.banner p{
+main.banner p:not(:last-child){margin-bottom: 15px;}
+main.banner p{
     color: white;
 }
 
-
-
+                            /*  Section - UX (Experiencia do Usuário) */
+section.ux{
+    text-align: center;
+    padding: 30px 0;
+}
+section.ux .center > div:first-child{
+    border-bottom: 3px solid #52aaa7;
+    position: relative;
+    left: 50%;
+    transform: translate(-138%);
+}
+section.ux .center > h1{
+    color: #52aaa7;
+}
+.wrapper-ux{
+    display: flex;
+    padding: 20px 0 10px 0;
+    text-align: center;
+    color: #8a6b62;;
+}
+.ux-single i{
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.ux-single p{color: black;}
                                     /*   Responsivo   */
 @media screen and (max-width:768px){
     /* Header */
@@ -116,5 +145,11 @@ section.banner p{
         text-decoration: none;
     }
 
-    /*  */
+    /* Section - UX */
+    .wrapper-ux{
+        flex-wrap: wrap;
+    }
+    .ux-single{
+        margin-bottom: 25px;
+    }
 }
