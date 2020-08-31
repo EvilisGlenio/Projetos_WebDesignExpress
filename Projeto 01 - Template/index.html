@@ -80,7 +80,10 @@
                 <h2><i class="fa fa-bullhorn" aria-hidden="true"></i> Obtenha nosso e-book gratuito!</h2>
             </div><!--Call-->
             <div class="w50 action">
-                <input type="email" name="email" placeholder="E-mail" /><input type="submit" name="acao" value="Enviar" />
+                <form >
+                    <span></span>
+                    <input type="email" name="email" placeholder="E-mail" /><input type="submit" name="acao" value="Enviar" />
+                </form>
             </div><!--Action-->
         </div><!--Center-->
     </section><!--CALL TO ACTION-->
@@ -121,6 +124,28 @@
             $('nav.menu-mobile h2').click(function(){
                 $('nav.menu-mobile ul').slideToggle();
             })
+        })
+    </script>
+   <script>
+        $(function(){
+            $('form').submit(function(){
+                var erro = false;
+                var email = $('[type=email]').val();
+
+                resetForm();
+                if(email == ''){
+                    erro = true;
+                    var el = $('[type=email]');
+                    el.parent().find('span').html('Por favor insira um email!');
+                    el.css('border','2px solid red');
+                }
+
+                return false;
+            })
+            function resetForm(){
+                $('input[type=email]').css('border','0');
+                $('span').html('');
+            }
         })
     </script>
 </body>

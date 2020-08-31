@@ -114,13 +114,14 @@ section.ux .center > h1{
 .ux-single p{color: black;}
 
                                 /*  Section - Call To Action */
-section.cta{padding: 10px; background: #52aaa7;}
+section.cta{padding: 15px 0; background: #52aaa7;}
 section.cta > .center{display: flex;}
 section.cta .call h2{
     text-align: center;
     color: white;
     font-weight: normal;
     font-size: 23px;
+    padding: 10px;
 }
 section.cta input[type=email]{
     width: 85%;
@@ -129,13 +130,26 @@ section.cta input[type=email]{
     padding-left: 10px;
     line-height: 10px;
 }
+section.cta input[type=email]:focus,
+section.cta input[type=submit]:focus{outline: 0;}
 section.cta input[type=submit]{
     cursor: pointer;
     width: 15%;
-    height: 40px;
+    height: 43px;
     background: #1d6c64;
     color: white;
+    border: 0;
+    border-bottom: 3px solid #20a194;
+}
+section.cta input[type=submit]:hover{
+    background: #1b4f4a;
+}
 
+section.cta span{
+    color: red;
+    padding: 3px;
+    font-size: 15px;
+    display: block;
 }
                                 /*  Section - Portifólio */
 .portifolio{
