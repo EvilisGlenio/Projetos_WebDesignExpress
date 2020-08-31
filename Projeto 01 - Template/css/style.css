@@ -193,6 +193,9 @@ section.portifolio .center > h1{
     font-weight: lighter;
     text-align: left;
 }
+                                /*  Section - Sobre - Equipe */
+section.team{padding: 20px 0;}
+section.team > .center{display: flex;}
                                     /*   Responsivo   */
 @media screen and (max-width:768px){
     /* Header */
@@ -242,4 +245,7 @@ section.portifolio .center > h1{
     }
     .port-single{margin-bottom: 30px;}
     .w33{width: 100%;}
+    /* CTA */
+    section.cta > .center{flex-wrap: wrap;}
+    .w50{width: 100%; margin-bottom: 10px;}
 }
