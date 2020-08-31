@@ -16,6 +16,8 @@ html, body{
     padding: 0 2%;
 }
 .clear{clear: both;}
+.w33{width: 33.3%;}
+.w50{width: 50%;}
 
                                         /*  Site  */
 
@@ -111,13 +113,71 @@ section.ux .center > h1{
 }
 .ux-single p{color: black;}
 
-                                /*  Section - Portifólio */
+                                /*  Section - Call To Action */
+section.cta{padding: 10px; background: #52aaa7;}
+section.cta > .center{display: flex;}
+section.cta .call h2{
+    text-align: center;
+    color: white;
+    font-weight: normal;
+    font-size: 23px;
+}
+section.cta input[type=email]{
+    width: 85%;
+    height: 40px;
+    border: 0;
+    padding-left: 10px;
+    line-height: 10px;
+}
+section.cta input[type=submit]{
+    cursor: pointer;
+    width: 15%;
+    height: 40px;
+    background: #1d6c64;
+    color: white;
 
+}
+                                /*  Section - Portifólio */
+.portifolio{
+    padding: 30px 0;
+}
+section.portifolio .center > div:first-child{
+    border-bottom: 3px solid #52aaa7;
+    position: relative;
+    left: 50%;
+    transform: translate(-75%);
+}
+section.portifolio .center > h1{
+    margin-bottom: 20px;
+    text-align: center;
+    color: #52aaa7;
+}
 .port-wrapper{
     display: flex;
 }
+.img{
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
 .img img{
-    max-width: 320px;
+    width: 100%;
+    max-height: 200px;
+}
+.port-single{
+    text-align: center;
+    padding: 0 20px;
+}
+.port-single h2{
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.port-single p{
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: left;
 }
                                     /*   Responsivo   */
 @media screen and (max-width:768px){
@@ -161,4 +221,11 @@ section.ux .center > h1{
     .ux-single{
         margin-bottom: 25px;
     }
+        /* Portifólio */
+    .port-wrapper{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .port-single{margin-bottom: 30px;}
+    .w33{width: 100%;}
 }
