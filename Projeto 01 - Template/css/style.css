@@ -223,7 +223,12 @@ section.team > .center{display: flex;}
     font-weight: lighter;
 }
 /* Sobre */
+.sobre  p{
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: lighter;
 
+}
                                     /*   Responsivo   */
 @media screen and (max-width:768px){
     /* Header */
@@ -264,16 +269,26 @@ section.team > .center{display: flex;}
         flex-wrap: wrap;
     }
     .ux-single{
-        margin-bottom: 25px;
+        margin-bottom: 50px;
     }
         /* Portifólio */
     .port-wrapper{
         flex-wrap: wrap;
         text-align: center;
     }
-    .port-single{margin-bottom: 30px;}
+    .port-single{margin-bottom: 50px;}
     .w33{width: 100%;}
     /* CTA */
     section.cta > .center{flex-wrap: wrap;}
     .w50{width: 100%; margin-bottom: 10px;}
+    /* Team */
+    section.team > .center{
+        flex-wrap: wrap;
+    }
+    .w50{
+        width: 100%;
+    }
+    .sobre{
+        margin-top: 50px;
+    }
 }
