@@ -194,8 +194,51 @@ section.portifolio .center > h1{
     text-align: left;
 }
                                 /*  Section - Sobre - Equipe */
-section.team{padding: 20px 0;}
+section.team{padding: 20px 0;background: rgb(225,225,225);}
 section.team > .center{display: flex;}
+/* Team */
+section.team .team-wrapper > div:first-child{
+    border-bottom: 3px solid #52aaa7;
+    position: relative;
+    left: 50%;
+    transform: translate(-78%);
+}
+section.team .team-wrapper > h1{
+    margin-bottom: 20px;
+    text-align: center;
+    color: #52aaa7;
+}
+.team-single{
+    padding: 10px 0;
+    display: flex;
+}
+.team-single .perfil{
+   min-width: 15%;
+   padding-top: 15%;
+   margin-right: 5px;
+   background: blue;
+   border-radius: 50%;
+}
+.team-single h2{
+ font-size: 20px;
+ font-weight: normal;
+}
+.team-single p{
+    font-size: 15px;
+    font-weight: lighter;
+}
+/* Sobre */
+section.team .sobre > div:first-child{
+    border-bottom: 3px solid #52aaa7;
+    position: relative;
+    left: 50%;
+    transform: translate(-78%);
+}
+section.team .sobre > h1{
+    margin-bottom: 20px;
+    text-align: center;
+    color: #52aaa7;
+}
                                     /*   Responsivo   */
 @media screen and (max-width:768px){
     /* Header */
