@@ -229,6 +229,44 @@ section.team > .center{display: flex;}
     font-weight: lighter;
 
 }
+
+                                /*  Footer - Rodapé 01 */
+footer.footer01{
+    padding: 20px 0;
+    background-color: #52aaa7;
+}
+footer.footer01 > .center{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+footer.footer01 > .center h2{
+    font-weight: normal;
+    color: white;
+    margin-bottom: 10px;
+}
+footer.footer01 > .center p,
+footer.footer01 > .center a{
+    font-weight: normal;
+    color: white;
+    line-height: 30px;
+}
+.link a{
+    display: block;
+}
+.redes a:first-of-type{
+    margin-right: 30px;
+}
+                                /*  Footer - Rodapé 02 */
+footer.footer02{
+    padding: 30px 0;
+    background-color: #237a70;
+}
+footer.footer02 > .center h3{
+    color: white;
+    font-weight: normal;
+    text-align: center;
+}
                                     /*   Responsivo   */
 @media screen and (max-width:768px){
     /* Header */
@@ -290,5 +328,12 @@ section.team > .center{display: flex;}
     }
     .sobre{
         margin-top: 50px;
+    }
+    /* Footer 01 */
+    footer.footer01 > .center{
+        text-align: center;
+    }
+    footer.footer01 > .center .w33:not(:last-of-type){
+        margin-bottom: 30px;
     }
 }
