@@ -55,8 +55,10 @@
 
     <section class="ux">
         <div class="center">
-            <div style="width:100px;"></div>
+            <div class="line-text">
+                <div style="width:120px;"></div>
             <h1>Experiência do Usuário</h1>
+            </div><!--Text-Line-->
             <div class="wrapper-ux">
                 <div class="ux-single">
                     <i class="fa fa-users" aria-hidden="true"></i>
@@ -90,8 +92,11 @@
 
     <section class="portifolio">
         <div class="center">
-            <div style="width:100px;"></div>
-            <h1>Nosso TOP 3</h1>
+            <div class="line-text">
+                <div style="width:65px;"></div>
+                <h1>Nosso TOP 3</h1>
+            </div><!--Text-Line-->
+            
             <div class="port-wrapper">
                 <div class="port-single w33">
                     <div class="img">
@@ -121,37 +126,44 @@
     <section class="team">
         <div class="center">
             <div class="team-wrapper w50">
-                <div style="width:100px;"></div>
-                <h1>Quem somos</h1>
+                <div class="line-text">
+                    <div style="width:65px;"></div>
+                    <h1>Quem somos</h1>
+                </div><!--Line-Text-->
+                
                 <div class="team-single">
                     <div class="perfil"></div><!--Perfil-->
-                    <div>
+                    <div class="cont-perfil">
                         <h2>Evilis Glenio</h2>
                         <p>Programador, Estudante, CEO da Loren Code. Apaixonado por tecnologia e natureza.</p>
-                    </div>
+                    </div><!--Cont-Perfil-->
                 </div><!--Team-Single-->
                 <div class="team-single">
                     <div class="perfil">
                         <div class="avatar"></div><!--Avatar-->
                     </div><!--Perfil-->
-                    <div>
+                    <div class="cont-perfil">
                         <h2>Evilis Glenio</h2>
                         <p>Programador, Estudante, CEO da Loren Code. Apaixonado por tecnologia e natureza.</p>
-                    </div>
-                    
+                    </div><!--Cont-Perfil-->
                 </div><!--Team-Single-->
             </div><!--Team_Wrapper-->
-
             <div class="sobre w50">
-                <div style="width:100px;"></div>
-                <h1>Sobre nós</h1>
+                <div class="line-text">
+                    <div style="width:60px;"></div>
+                    <h1>Sobre nós</h1>
+                </div><!--Text-Line-->
+                
                 <p>Enim in dolore commodo nostrud consectetur dolor enim fugiat et est. Lorem ipsum commodo veniam labore officia sit ea ullamco voluptate nisi veniam nulla dolore dolore anim qui voluptate id sed deserunt. Sit velit in eiusmod dolore culpa labore sunt ad tempor culpa eu irure commodo nostrud. </p>
                 <p>Enim in dolore commodo nostrud consectetur dolor enim fugiat et est. Lorem ipsum commodo veniam labore officia sit ea ullamco voluptate nisi veniam nulla dolore dolore anim qui voluptate id sed deserunt. Sit velit in eiusmod dolore culpa labore sunt ad tempor culpa eu irure commodo nostrud. </p>
             </div><!--Sobre-->
         </div><!-- Center-->
     </section><!--Team-->
 
+                                    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- função barra para menu mobile -->
     <script>
         $(function(){
             $('nav.menu-mobile h2').click(function(){
@@ -159,6 +171,8 @@
             })
         })
     </script>
+
+    <!--Função para feedback no "formulário" -->
    <script>
         $(function(){
             $('form').submit(function(){

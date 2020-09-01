@@ -16,6 +16,24 @@ html, body{
     padding: 0 2%;
 }
 .clear{clear: both;}
+/*Line-Text: Um título para a maioria das secções do site;*/
+.line-text{
+    display: inline-block;
+    position: relative;
+}
+.line-text div{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 2px;
+    background-color: #52aaa7;
+}
+.line-text > h1{
+    color: #52aaa7;
+    font-weight: normal;
+    font-size: 22px;
+}
+/*End Text-Line*/
 .w33{width: 33.3%;}
 .w50{width: 50%;}
 
@@ -92,15 +110,6 @@ section.ux{
     text-align: center;
     padding: 30px 0;
 }
-section.ux .center > div:first-child{
-    border-bottom: 3px solid #52aaa7;
-    position: relative;
-    left: 50%;
-    transform: translate(-138%);
-}
-section.ux .center > h1{
-    color: #52aaa7;
-}
 .wrapper-ux{
     display: flex;
     padding: 20px 0 10px 0;
@@ -154,20 +163,11 @@ section.cta span{
                                 /*  Section - Portifólio */
 .portifolio{
     padding: 30px 0;
-}
-section.portifolio .center > div:first-child{
-    border-bottom: 3px solid #52aaa7;
-    position: relative;
-    left: 50%;
-    transform: translate(-75%);
-}
-section.portifolio .center > h1{
-    margin-bottom: 20px;
     text-align: center;
-    color: #52aaa7;
 }
 .port-wrapper{
     display: flex;
+    margin-top: 20px;
 }
 .img{
     max-width: 100%;
@@ -197,48 +197,33 @@ section.portifolio .center > h1{
 section.team{padding: 20px 0;background: rgb(225,225,225);}
 section.team > .center{display: flex;}
 /* Team */
-section.team .team-wrapper > div:first-child{
-    border-bottom: 3px solid #52aaa7;
-    position: relative;
-    left: 50%;
-    transform: translate(-78%);
-}
-section.team .team-wrapper > h1{
-    margin-bottom: 20px;
-    text-align: center;
-    color: #52aaa7;
-}
 .team-single{
     padding: 10px 0;
     display: flex;
 }
 .team-single .perfil{
-   min-width: 15%;
-   padding-top: 15%;
-   margin-right: 5px;
-   background: blue;
-   border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  background-color: gray;
+  background-position: 100% 100%;
+  border-radius: 50%;
+}
+.cont-perfil{
+    width: calc(100% - 75px);
+    margin-left: 5px;
+    padding: 5px 0;
 }
 .team-single h2{
- font-size: 20px;
+ font-size: 18px;
  font-weight: normal;
+ font-style: italic;
 }
 .team-single p{
     font-size: 15px;
     font-weight: lighter;
 }
 /* Sobre */
-section.team .sobre > div:first-child{
-    border-bottom: 3px solid #52aaa7;
-    position: relative;
-    left: 50%;
-    transform: translate(-78%);
-}
-section.team .sobre > h1{
-    margin-bottom: 20px;
-    text-align: center;
-    color: #52aaa7;
-}
+
                                     /*   Responsivo   */
 @media screen and (max-width:768px){
     /* Header */
