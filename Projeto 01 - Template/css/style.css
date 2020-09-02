@@ -37,7 +37,7 @@ html, body{
 .w33{width: 33.3%;}
 .w50{width: 50%;}
 
-                                        /*  Site  */
+                                    /***  Página HOME  ***/
 
                                         /*  Header  */
 header{
@@ -96,14 +96,15 @@ main.banner .overlay{
     width: 100%;
     height: 100%;
     background: black;
-    opacity: 0.4;
+    opacity: 0.5;
     z-index: 1;
 }
 main.banner h2{
     text-align: center;
     color: #52aaa7;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: normal;
+    margin-bottom: 10px;
 }
 main.banner p:not(:last-child){margin-bottom: 15px;}
 main.banner p{
@@ -272,6 +273,89 @@ footer.footer02 > .center h3{
     font-weight: normal;
     text-align: center;
 }
+
+
+
+                            /***     Ínicio da Pagina SOBRE   ***/
+
+    /*SOBRE*/
+main.sobre{
+    position: relative;
+    padding: 35px 0;
+    background-image: url(../images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+main.sobre > .center{
+    position: relative;
+    z-index: 9;
+}
+main.sobre .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 1;
+}
+main.sobre h1{
+    color: #44D4C5;
+    font-weight: normal;
+    font-size: 35px;
+}
+main.sobre p{
+    color: white;
+}
+
+    /*ABOUT-BANNER*/
+section.about-banner{
+    padding: 30px 0;
+}
+section.about-banner > .center{
+    display: flex;
+    flex-wrap: wrap;
+}
+section.about-banner .banner{padding: 0 10px 10px 10px;}
+section.about-banner .banner img{max-width: 100%; min-height: 220px;}
+section.about-banner .about{padding: 0 10px;}
+section.about-banner p{
+    font-size: 15px;
+    font-weight: lighter;
+    margin-bottom: 15px;
+}
+
+    /*PARALAX*/
+section.paralax{
+    text-align: center;
+    padding: 35px 0;
+    background-image: url(../images/img3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+section.paralax h2{
+    padding: 5px 15px;
+    display: inline-block;
+    border: 1px solid #44D4C5;
+    color: #44D4C5;
+    font-weight: lighter;
+    margin-bottom: 15px;
+}
+section.paralax p{
+    color: white;
+    margin-bottom: 10px;
+}
+    /*EQUIPE*/
+section.equipe{padding: 35px 0;}
+section.equipe .line-text{margin-bottom: 15px;}
+section.equipe .line-text h1{font-size: 27px;}
+section.equipe .equipe-single{
+    float: left;
+}
                                     /*   Responsivo   */
 @media screen and (max-width:768px){
     /* Header */
@@ -331,4 +415,9 @@ footer.footer02 > .center h3{
     footer.footer01 > .center .w33:not(:last-of-type){
         margin-bottom: 30px;
     }
+
+
+
+    /*ABOUT-BANNER*/
+    section.about-banner .about{padding: 0;}
 }
