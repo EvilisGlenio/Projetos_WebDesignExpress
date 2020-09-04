@@ -384,7 +384,12 @@ section.equipe .equipe-single h3{
 section.equipe .equipe-single p{
     font-weight: lighter;
 }
+     /*CARTÂO*/
 
+section.card{
+    background: rgb(230, 230, 230);
+    padding: 30px 0;
+}
                                     /*   Responsivo   */
 @media screen and (max-width:768px){
     /* Header */
