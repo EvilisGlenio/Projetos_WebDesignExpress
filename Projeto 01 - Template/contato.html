@@ -55,25 +55,36 @@
         <div class="center">
             <div class="form w60">
                 <h3>Entre em contato que estaremos respondendo o mais breve possível!</h3>
+                <div class="box-sucess">Formulário enviado com sucesso!</div>
                 <form >
-                    <div class="form-itens">
+                    <div class="form-itens w100">
+                        <span></span>
                         <input type="text" name="nome" placeholder="Nome Completo" />
                     </div><!--Form-Itens-->
-                    <div class="form-itens">
+                    <div class="form-itens w50 pr">
+                        <span></span>
                         <input type="email" name="email" placeholder="E-mail" />
                     </div><!--Form-Itens-->
-                    <div class="form-itens">
+                    <div class="form-itens w50">
+                        <span></span>
                         <input type="tel" name="tel" placeholder="(xx) xxxx-xxxx" />
                     </div><!--Form-Itens-->
-                    <div class="form-itens">
+                    <div class="form-itens w100">
+                        <span></span>
                         <textarea name="coment" cols="30" rows="10" placeholder="Deixe sua dúvida aqui ..."></textarea>
                     </div><!--Form-Itens-->
-                    <div class="form-itens">
+                    <div class="form-itens w100">
                         <input type="submit" name="acao" value="Enviar" />
                     </div><!--Form-Itens-->
                 </form>
             </div><!--FORM-->
-            <div class="w40"></div>
+            <div class="cont w40">
+                <h2><i class="fa fa-comment" aria-hidden="true"></i> Fale com a nossa equipe!</h2>
+                <h4>Commodo enim duis veniam laborum dolore nostrud cupidatat deserunt.</h4>
+                <p><i class="fa fa-paper-plane" aria-hidden="true"></i> contato@lorencode.com</p>
+                <p><i class="fa fa-twitter" aria-hidden="true"></i> @lorencode</p>
+                <p><i class="fa fa-facebook" aria-hidden="true"></i> /lorencode</p>
+            </div><!--Cont-->
         </div><!--Center-->
     </section><!--Contact-->
 
@@ -114,5 +125,59 @@
             })
         })
      </script>
+
+      <!--Função para feedback no "formulário" -->
+   <script>
+        $(function(){
+            $('form').submit(function(){
+                var erro = false;
+                var nome = $('[type=text]').val();
+                var email = $('[type=email]').val();
+                var tel = $('[type=tel]').val();
+                var text = $('[name=coment]').val();
+
+                resetForm();
+                if(nome == ''){
+                    erro = true;
+                    var el = $('[type=text]');
+                    el.parent().find('span').html('Por favor insira seu Nome!');
+                    el.css('border','2px solid red');
+                }
+                if(email == ''){
+                    erro = true;
+                    var el = $('[type=email]');
+                    el.parent().find('span').html('Por favor insira seu email!');
+                    el.css('border','2px solid red');
+                }
+                if(tel == ''){
+                    erro = true;
+                    var el = $('[type=tel]');
+                    el.parent().find('span').html('Por favor insira o seu número!');
+                    el.css('border','2px solid red');
+                }
+                if(text == ''){
+                    erro = true;
+                    var el = $('[name=coment]');
+                    el.parent().find('span').html('Por favor insira um comentáriol!');
+                    el.css('border','2px solid red');
+                }
+
+                if(erro == false){
+                    $('.box-sucess').fadeIn(function(){
+                        setTimeout(function(){
+                            $('.box-sucess').fadeOut();
+                        },5000);
+                    });
+                    $(this)[0].reset();
+                }
+
+                return false;
+            })
+            function resetForm(){
+                $('input[type=text],input[type=email], input[type=tel],[name=coment]').css('border','1px solid #ccc');
+                $('span').html('');
+            }
+        })
+    </script>
 </body>
 </html>

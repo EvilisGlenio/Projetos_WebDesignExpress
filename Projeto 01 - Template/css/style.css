@@ -34,8 +34,11 @@ html, body{
     font-size: 22px;
 }
 /*End Text-Line*/
-.w33{width: 33.3%;}
+.w33{width: 33.35%;}
+.w40{width: 40%;}
 .w50{width: 50%;}
+.w60{width: 60%;}
+.w100{width: 100%;}
 
                                     /***  Página HOME  ***/
 
@@ -413,37 +416,120 @@ section.card .history p{
                             /***     Ínicio da Pagina CONTATO   ***/
 
     /*SOBRE-CONTATO*/
-    main.sobre-contato{
-        position: relative;
-        padding: 35px 0;
-        background-image: url(../images/img1.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
-    main.sobre-contato > .center{
-        position: relative;
-        z-index: 9;
-    }
-    main.sobre-contato .overlay{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: black;
-        opacity: 0.4;
-        z-index: 1;
-    }
-    main.sobre-contato h1{
-        color: #44D4C5;
-        font-weight: normal;
-        font-size: 35px;
-    }
-    main.sobre-contato p{color: white;}
-    
+main.sobre-contato{
+    position: relative;
+    padding: 35px 0;
+    background-image: url(../images/img1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+main.sobre-contato > .center{
+    position: relative;
+    z-index: 9;
+}
+main.sobre-contato .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 1;
+}
+main.sobre-contato h1{
+    color: #44D4C5;
+    font-weight: normal;
+    font-size: 35px;
+}
+main.sobre-contato p{color: white;}
+
+    /*FORMULÁRIO*/
+
+section.contact{padding: 40px 0;}
+section.contact > .center{display: flex; flex-wrap: wrap;}
+section.contact .form .box-sucess{
+    width: 100%;
+    padding: 5px 10px;
+    text-align: center;
+    background-color: #5fb382;
+    color: white;
+    margin-bottom: 15px;
+    display: none;
+}
+section.contact .form h3{
+    width: 100%;
+    padding: 3px 0;
+    text-align: center;
+    font-weight: normal;
+    font-size: 17px;
+    background-color: #dddddd;
+    color: #aaaaaa;
+    margin-bottom: 10px;
+}
+.form form{padding: 0 10px; display: flex; flex-wrap: wrap;}
+.form-itens input[type=text],
+.form-itens input[type=email],
+.form-itens input[type=tel],
+.form-itens textarea{
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #cccccc;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+.pr{padding-right: 10px;}
+.form-itens span{
+    color: red;
+    font-size: 15px;
+}
+.form-itens textarea{height: 140px; resize: vertical;}
+.form-itens input[type=submit]{
+    cursor: pointer;
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+    color: white;
+    background-color: #1d6c64;
+    border: 0;
+    border-bottom: 2px solid #104a44;
+    margin: 0 auto;
+}
+.form-itens input[type=submit]:hover{
+    background-color: #1e8278;
+}
+.form-itens input[type=text]:focus,
+.form-itens input[type=email]:focus,
+.form-itens input[type=tel]:focus,
+.form-itens input[type=submit]:focus,
+.form-itens textarea:focus{
+    outline: 0;
+}
+
+        /*CONT*/
+
+section.contact .cont{
+    padding-left: 4%;
+}
+.cont h2{font-weight: normal;}
+.cont h4{font-weight: lighter;margin-bottom: 10px;}
+.cont p{
+    font-weight: lighter;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    padding: 8px 0;
+    color: white;
+    background: #249B8F;
+    margin-bottom: 6px;
+}
                                     /*   Responsivo   */
 @media screen and (max-width:768px){
+    /** Classes Auxiliares **/
+    .w60{width: 100%;}
+    .w40{width: 100%;}
     /* Header */
     .menu-desktop{display: none;}
     nav.menu-mobile h2{display: initial;}
@@ -506,4 +592,11 @@ section.card .history p{
 
     /*ABOUT-BANNER*/
     section.about-banner .about{padding: 0;}
+
+        /*Contato - Formulário*/
+        section.contact .form{margin-bottom: 50px;}
+
+        /*Contato - Cont*/
+        section.contact .cont{padding: 0;}
 }
+
