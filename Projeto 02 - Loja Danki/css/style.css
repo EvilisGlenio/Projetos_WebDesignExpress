@@ -1,0 +1,229 @@
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+}
+
+a{
+	text-decoration: none;
+}
+
+/*Classes Auxiliares*/
+
+.container{
+	max-width: 1280px;
+	padding: 0 2%;
+	margin: 0 auto;
+}
+.clear{ clear: both; }
+.w50{
+	width: 50%;
+	padding: 0 15;
+	float: left;
+}
+.w50 h1{
+	font-size: 22px;
+	font-weight: normal;
+}
+/*---------------------------------SITE---------------------------------------*/
+/* Header */
+
+header{
+	background-color: #5e3ea1;
+	padding: 25px 0;
+}
+header .container{
+	display: flex;
+}
+/*menu-desktop*/
+.logo{
+	width: 50%;
+	cursor: pointer;
+	font-size: 25px;
+	text-align: left;
+	color: white;
+}
+.desktop{
+	width: 50%;
+	text-align: right;
+}
+.desktop ul{list-style-type: none;}
+.desktop li{
+	display: inline-block;
+	padding: 4px 12px;
+}
+.desktop a{
+	color: white;
+}
+
+/*menu-mobile*/
+
+.mobile{
+	display: none;
+}
+.sofona ul{
+	display: none;
+}
+
+/* CHAMADA */
+
+section.call-text{
+	background-color: #4c3282;
+	text-align: center;
+	padding: 35px 0;
+	color: white;
+}
+
+.call-text i{
+	font-size: 40px;
+}
+.call-text h2,
+.call-text h3{
+	font-weight: normal;
+	padding: 5px 0;
+}
+.call-text h2 > b{
+	color: rgb(231, 66, 107);
+}
+
+/* LOJA */
+
+section.store{
+	padding: 50px 0;
+}
+section.store > .container{
+	display: flex;
+	flex-wrap: wrap;
+}
+.store-wrapper{
+	width: 33.3%;
+	padding: 25px;
+	margin-bottom: 50px;
+}
+.store-wrapper img{
+	max-width: 100%;
+}
+.store-single{
+	border: 1px solid #ccc;
+	height: 100%;
+}
+.store-single h2{
+	width: 60%;
+	margin: 0 auto;
+	padding: 10px 0;
+	font-weight: lighter;
+	text-align: center;
+	color: #555;
+}
+.store-single p{
+	font-size: 15px;
+	color: #333;
+	font-weight: lighter;
+	text-align: justify;
+	padding: 10px 8px;
+}
+.store-wrapper a{
+	display: block;
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+	color: white;
+	background-color: #5fb382;
+}
+
+/* NOVIDADES */
+
+section.novidades{
+	padding: 25px 0;
+}
+.single-notice h2{
+	font-weight: normal;
+	font-size: 20px;
+	margin-top: 10px;
+}
+.single-notice p{
+	font-size: 16px;
+	font-weight: lighter;
+	padding: 8px 0;
+}
+.depoimentos li{
+	list-style: none;
+	font-weight: lighter;
+	padding: 5px 0;
+}
+
+/* FOOTER*/
+
+footer.rodape{
+	background-color: #4c3282;
+	text-align: center;
+	padding: 20px 0;
+}
+footer.rodape a{
+	font-size: 20px;
+	color: white;
+}
+
+/* RESPONSIVO */
+@media screen and (max-width: 1024px){
+	.store-wrapper{
+		width: 50%;
+		max-width: 450px;
+		margin: 30px auto;
+	}
+}
+
+
+@media screen and (max-width: 768px){
+	.logo, .desktop{
+		display: none;
+	}
+	.mobile{
+		display: flex;
+	}
+	.sofona ul{
+		display: none;
+	}
+	.mobile{
+		width: 100%;
+		color: white;
+	}
+	.mobile i{
+		cursor: pointer;
+		width: 40%;
+		text-align: left;
+		font-size: 20px;
+	}
+	.mobile .logmob{
+		width: 60%;
+		text-align: left;
+		font-size: 20px;
+		color: white;
+	}
+	.sofona ul{
+		list-style-type: none;
+	}
+	.sofona li{
+		text-align: center;
+		width: 100%;
+		padding: 20px 0;
+	}
+	.sofona li > a{
+		font-size: 18px;
+		width: 100%;
+		color: #5e3ea1;
+	}
+
+	.store-wrapper{
+		width: 100%;
+		max-width: 450px;
+		margin: 30px auto;
+	}
+
+	.w50{
+		width: 100%;
+		padding: 20px 2%;
+		margin-bottom: 20px;
+	}
+}
